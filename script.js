@@ -1,0 +1,15 @@
+let t1 = gsap.timeline()
+
+t1.from('.part',{stagger:.05,x:60,duration:2.5,opacity:0,ease:'expo.inOut'})
+.from('#snow h3',{y:30,opacity:0,duration:3,scale:1.1})
+.to('#snow',{delay:-1,stagger:.6,y:-222,duration:2,opacity:0,ease:'expo.inOut'})
+.to('.part',{delay:-1,stagger:.2,y:-622,duration:1.7,opacity:0,ease:'expo.inOut'})
+.to('#back1',{delay:-1,y:'-100%',duration:1,opacity:0,ease:'expo.inOut'})
+.from('#left h2',{x:50,opacity:0,duration:1,ease:'expo.inOut'})
+.from('#left p',{stagger:.3,x:50,opacity:0,duration:.8,ease:'expo.inOut'})
+.from('#right i',{stagger:.3,x:50,opacity:0,duration:.8,delay:-1,ease:'expo.inOut'})
+.from('#side p',{stagger:.3,x:50,opacity:0,duration:.8,ease:'expo.inOut'})
+.from('#text',{y:30,opacity:0,duration:1,ease:'expo.inOut'})
+.from('#scroll',{y:50,opacity:0,duration:.8,ease:'expo.inOut'})
+.from('#attract',{opacity:0,duration:3.2,delay:-1.5})
+

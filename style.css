@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat';
+    overflow: hidden;
+}
+#back1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: white;
+    position: absolute;
+    z-index: 9999;
+}
+.part{
+    width: 25%;
+    height: 100%;
+    background-color: rgb(8, 4, 19);
+}
+#snow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 691px;
+    height: 130px;
+}
+#snow svg:nth-child(1){
+    display: block;
+    width: 280px;
+    stroke-dasharray: 1030px;
+    stroke-dashoffset: 1030px;
+    animation: aa 2.7s ease-in-out 2.4s   both;
+}
+#snow svg:nth-child(2){
+    display: block;
+    width: 111px;
+    position: absolute;
+    top: 39%;
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px;
+    animation: aa 4s ease-in-out 3.2s   both;
+}
+#snow h3{
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 100;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 41px;
+    margin-left: 41px;
+    margin-top: 20px;
+}
+@keyframes aa{
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+
+#back2{
+    width:100%;
+    height: 100%;
+    background-color: rgb(42, 40, 48);
+    position: relative;
+}
+#navi{
+    width: 100%;
+    height: 12%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+#left{
+    display: flex;
+    align-items: center;
+}
+#left h2{
+    font-size: 8px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    margin-right: 50px;
+}
+#left p{
+    color: white;
+    font-weight: 200;
+    font-size: 7px;
+    text-transform: uppercase;
+    margin-left: 34px;
+    letter-spacing: 3px;
+}
+
+#right i{
+    color: rgb(197, 194, 194);
+    font-size: 11px;
+    margin-right: 14px;
+}
+#bphoto{
+    position: absolute;
+    top: 0%;
+    width: 47%;
+    right: 10%;
+    height: 100%;
+    background-color: rgb(67, 83, 163);
+    background-image: url(https://images.unsplash.com/photo-1502898295-455afaf0f015?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);
+    background-position: center;
+    background-size: cover;
+}
+#sphoto{
+    position: absolute;
+    width: 22%;
+    height: 50%;
+    background-color: rgb(67, 83, 163);
+    left: 15%;
+    bottom: 25%;
+    background-image: url(https://images.unsplash.com/photo-1505734169265-a86113baa6c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);
+    background-position: center;
+    background-size: cover;
+}
+
+.layer{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    background-color: rgba(118, 171, 202, 0.589);
+    animation: layerAnim 2.7s ease-in-out 8.4s   both;
+}
+
+#side{
+    padding: 0 80px;
+    position: absolute;
+    left: 71%;
+    bottom: 41%;
+    width: 46%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: rotate(90deg);
+}
+#side p{
+    font-size: 7px;
+    color: rgb(243, 237, 237);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+#text{
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    width: 22%;
+    height: 10%;
+    font-size: 8px;
+    color: white;
+    line-height: 17px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+#attract{
+    position: absolute;
+    bottom: 25%;
+    left: 20%;
+}
+#attract p{
+    font-size: 60px;
+    font-family: 'PlayFair Display';
+    color: rgb(241, 241, 241);
+    font-weight: 300;
+}
+#attract h5{
+    margin-top: 6px;
+    color: rgb(255, 255, 255);
+    font-weight:400;
+    font-size: 26px;
+    margin-left: 6px;
+    text-decoration: underline;
+}
+#scroll{
+    position: absolute;
+    left: 0%;
+    bottom: 22%;
+    color: white;
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 8px;
+    transform: rotate(-90deg);
+}
+#scroll::after{
+    content: '';
+    position: absolute;
+    width: 46%;
+    height: 1.2px;
+    background-color: white;
+    top: 50%;
+    right: 110%;
+    transform: translate(0,-50%);
+}
+
+
+
+@keyframes layerAnim{
+    0%{
+        left: 0%;
+        width: 0%;
+    }
+    50%{
+        left: 0%;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 0%;
+    }
+}
